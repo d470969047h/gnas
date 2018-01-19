@@ -1,0 +1,19 @@
+*{margin:0;padding:0;}
+body{font-family:Arial,"Microsoft YaHei","΢���ź�";font-size:14px;margin:0 auto;min-width:1000px;}
+body,html{height: 100%;}
+html,body,a,a:link,a:visited,a:hover,a:active,select,input,label,button,textarea,h1,h2,h3,h4,h5,h6{ font-family:Arial,"Microsoft YaHei","΢���ź�"; font-style:normal;}
+a,a:link,a:visited,a:hover,a:active,a:focus,*:focus{text-decoration: none; cursor:pointer;outline:none;}
+ul{margin:0px;padding: 0px;}
+dl,dt,dd,ul,li,p,button,input,h1,h2,h3,h4,h5,h6{ list-style:none; height:auto; border:0 none;}
+select,input,label,buttona,img,form{ vertical-align:middle;}
+select,input,label,button,textarea,form{-webkit-touch-callout: text;-webkit-user-select: text;-khtml-user-select: text;-moz-user-select: text;-ms-user-select: text;user-select: text;}
+h1{font-size:36px;}
+h2{font-size:30px;}
+h3{font-size:24px;}
+h4{font-size:18px;}
+h5{font-size:14px;}
+h6{font-size:12px;}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color: #777;font-size: 65%; font-weight: normal;}
+table{border-collapse:collapse;border-spacing: 0;}
+div{box-sizing:border-box;}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0;}
