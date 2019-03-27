@@ -22,3 +22,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+/.mvn/
+out/
+src/main/java/com/hrtek/gnas/model/
+src/main/java/com/hrtek/gnas/util/

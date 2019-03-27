@@ -18,7 +18,8 @@ viewer = new Cesium.Viewer('earthContainer', {
     showRenderLoopErrors: false,
     //加载自定义地图瓦片需要指定一个自定义图片服务器//URL 为瓦片数据服务器地址
     imageryProvider : new Cesium.WebMapTileServiceImageryProvider({
-        url: "http://t0.tianditu.com/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles",
+        // url: "http://t0.tianditu.com/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&TileMatrix={TileMatrix}&TileRow={TileRow}&TileCol={TileCol}&style=default&format=tiles",
+        url: "http://t0.tianditu.gov.cn/vec_c/wmts?tk=a9252aa89556311507a0acc5370dbfec",
         layer: "tdtVecBasicLayer",
         style: "default",
         format: "image/jpeg",
