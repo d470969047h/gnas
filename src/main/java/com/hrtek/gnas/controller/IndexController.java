@@ -2,6 +2,8 @@ package com.hrtek.gnas.controller;
 
 import com.hrtek.gnas.entity.NewsEntity;
 import com.hrtek.gnas.service.NewsService;
+import com.hrtek.gnas.service.SolrService;
+import org.apache.solr.client.solrj.SolrServerException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -26,6 +29,9 @@ public class IndexController {
 
     @Resource
     private NewsService newsService;
+
+    @Resource
+    private SolrService solrUtil;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
@@ -141,6 +147,19 @@ public class IndexController {
     public NewsEntity getNews(@RequestParam("newsTitle") String newsTitle) {
         if (!StringUtils.isEmpty(newsTitle)){
             return newsService.getNewsByTitle(newsTitle);
+        }
+        return null;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/search")
+    public Object search() {
+        try {
+            return solrUtil.search();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SolrServerException e) {
+            e.printStackTrace();
         }
         return null;
     }
