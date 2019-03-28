@@ -1,7 +1,6 @@
 package com.hrtek.gnas.service.impl;
 
 import com.hrtek.gnas.entity.NewsEntity;
-import com.hrtek.gnas.mapper.NewsMapper;
 import com.hrtek.gnas.service.NewsService;
 import org.springframework.stereotype.Service;
 
@@ -18,27 +17,29 @@ import java.util.List;
 @Service
 public class NewsServiceImpl implements NewsService {
 
-    @Resource
-    private NewsMapper newsMapper;
 
 
     @Override
     public List<NewsEntity> list() {
-        return newsMapper.list();
+//        return newsMapper.list();
+        return null;
     }
 
     @Override
     public List<NewsEntity> getAddress() {
-        return newsMapper.getAddress();
+//        return newsMapper.getAddress();
+        return null;
     }
 
     @Override
     public List<String> getTitlesByNewsAddressName(String newsAddressName) {
-        return newsMapper.getTitlesByNewsAddressName(newsAddressName);
+//        return newsMapper.getTitlesByNewsAddressName(newsAddressName);
+        return null;
     }
 
     @Override
     public NewsEntity getNewsByTitle(String newsTitle) {
-        return newsMapper.getNewsByTitle(newsTitle);
+//        return newsMapper.getNewsByTitle(newsTitle);
+        return null;
     }
 }
